@@ -5,8 +5,8 @@ import {
   Navbar,
   Homepage,
   Exchanges,
-  CriptoDetails,
-  Criptos,
+  CryptoDetails,
+  Cryptos,
   News,
 } from "./components";
 import "./App.css";
@@ -24,8 +24,8 @@ const App = () => {
               <Route exact path="/" element={<Homepage />} />
               <Route exact path="/exchanges" element={<Exchanges />} />
 
-              <Route exact path="/criptos" element={<Criptos />} />
-              <Route exact path="/cripto/:coinId" element={<CriptoDetails />} />
+              <Route exact path="/cryptos" element={<Cryptos />} />
+              <Route exact path="/crypto/:coinId" element={<CryptoDetails />} />
               <Route exact path="/news" element={<News />} />
             </Routes>
           </div>

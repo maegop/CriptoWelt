@@ -16,7 +16,7 @@ const Navbar = () => {
       <div className="logo-container">
         <Avatar src={icon} size="large" />
         <Typography.Title level={2} className="logo">
-          <Link to="/">Cripto Welt</Link>
+          <Link to="/">Crypto Welt</Link>
         </Typography.Title>
       </div>
       <Menu theme="dark">
@@ -24,7 +24,7 @@ const Navbar = () => {
           <Link to="/">Home</Link>
         </Menu.Item>
         <Menu.Item icon={<FundOutlined />}>
-          <Link to="/criptos">Cryptos</Link>
+          <Link to="/cryptos">Cryptos</Link>
         </Menu.Item>
         <Menu.Item icon={<MoneyCollectOutlined />}>
           <Link to="/exchanges">Exchanges</Link>
