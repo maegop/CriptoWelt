@@ -5,6 +5,8 @@ import { Link } from "react-router-dom";
 
 import { useGetCryptosQuery } from "../services/cryptoApi";
 
+import { Criptos, News } from "../components";
+
 const { Title } = Typography;
 
 const Homepage = () => {
@@ -47,6 +49,26 @@ const Homepage = () => {
           />
         </Col>
       </Row>
+
+      <div className="home-heading-container">
+        <Title level={2} className="home-title">
+          Top 10 Cryptocurrencies
+        </Title>
+        <Title level={3} className="show-more">
+          <Link to="/criptos">Show More</Link>
+        </Title>
+      </div>
+      <Criptos simplified />
+
+      <div className="home-heading-container">
+        <Title level={2} className="home-title">
+          Latest Crypto News
+        </Title>
+        <Title level={3} className="show-more">
+          <Link to="/news">Show More</Link>
+        </Title>
+      </div>
+      <News simplified />
     </div>
   );
 };
