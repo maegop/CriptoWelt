@@ -51,24 +51,24 @@ const Homepage = () => {
       </Row>
 
       <div className="home-heading-container">
-        <Title level={2} className="home-title">
+        <Title level={3} className="home-title">
           Top 10 Cryptocurrencies
-        </Title>
-        <Title level={3} className="show-more">
-          <Link to="/cryptos">Show More</Link>
         </Title>
       </div>
       <Cryptos simplified />
+      <Title level={4} className="show-more">
+        <Link to="/cryptos">Show More</Link>
+      </Title>
 
       <div className="home-heading-container">
-        <Title level={2} className="home-title">
+        <Title level={3} className="home-title">
           Latest Crypto News
-        </Title>
-        <Title level={3} className="show-more">
-          <Link to="/news">Show More</Link>
         </Title>
       </div>
       <News simplified />
+      <Title level={4} className="show-more">
+        <Link to="/news">Show More</Link>
+      </Title>
     </div>
   );
 };

@@ -14,25 +14,35 @@ import {
   NumberOutlined,
   ThunderboltOutlined,
 } from "@ant-design/icons";
-import { useGetCryptoDetailsQuery } from "../services/cryptoApi";
+
+import {
+  useGetCryptoDetailsQuery,
+  useGetCryptoHistoryQuery,
+} from "../services/cryptoApi";
+import LineChart from "./LineChart";
+
 const { Title, Text } = Typography;
 const { Option } = Select;
 
 const CryptoDetails = () => {
   const { coinId } = useParams();
-  const [timePeriod, setTimePeriod] = useState("7d");
+  const [timePeriod, setTimePeriod] = useState("24h");
   const { data, isFetching } = useGetCryptoDetailsQuery(coinId);
+  const { data: coinHistory } = useGetCryptoHistoryQuery({
+    coinId,
+    timePeriod,
+  });
   const cryptoDetails = data?.data?.coin;
 
   console.log(data);
 
-  //if (isFetching) return <Loader />;
+  if (isFetching) return "Loading...";
 
   const time = ["3h", "24h", "7d", "30d", "3m", "6m", "1y", "3y", "5y"];
 
   const stats = [
     {
-      title: "Price to USD",
+      title: "Price in USD",
       value: `$ ${cryptoDetails?.price && millify(cryptoDetails?.price)}`,
       icon: <DollarCircleOutlined />,
     },
@@ -73,7 +83,7 @@ const CryptoDetails = () => {
       icon: <MoneyCollectOutlined />,
     },
     {
-      title: "Aprroved Supply",
+      title: "Aproved Supply",
       value: cryptoDetails?.supply?.confirmed ? (
         <CheckOutlined />
       ) : (
@@ -99,7 +109,7 @@ const CryptoDetails = () => {
   ];
 
   return (
-    <Col className="coin-etail-container">
+    <Col className="coin-detail-container">
       <Col className="coin-heading-container">
         <Title className="coin-name" level={2}>
           {cryptoDetails?.name} ({cryptoDetails?.symbol}) Price
@@ -109,10 +119,11 @@ const CryptoDetails = () => {
           and supply.
         </p>
       </Col>
+
       <Select
-        defaultValue="7d"
+        defaultValue="24h"
         className="select-timeperiod"
-        placeholder="Select Time Perior"
+        placeholder="Select Time Period"
         onChange={(value) => setTimePeriod(value)}
       >
         {time.map((date) => (
@@ -120,6 +131,14 @@ const CryptoDetails = () => {
         ))}
       </Select>
 
+      {/* ======   Line Chart block   ========== */}
+      {/* <LineChart
+        coinHistory={coinHistory}
+        currentPrice={cryptoDetails?.price}
+        coinName={cryptoDetails?.name}
+      /> */}
+
+      {/* ======   Crypto Statistics block   ========== */}
       <Col className="stats-container">
         <Col className="coin-value-statistics">
           <Col className="coin-value-statistics-heading">
@@ -129,6 +148,7 @@ const CryptoDetails = () => {
             <p>An overview showing the stats of {cryptoDetails?.name}</p>
           </Col>
 
+          {/* Value Statistics    ========== */}
           {stats.map(({ icon, title, value }) => (
             <Col className="coin-stats">
               <Col className="coin-stats-name">
@@ -148,6 +168,7 @@ const CryptoDetails = () => {
             <p>An overview showing the stats of all Cryptocurrencies</p>
           </Col>
 
+          {/* Other Statistics    ========== */}
           {genericStats.map(({ icon, title, value }) => (
             <Col className="coin-stats">
               <Col className="coin-stats-name">
@@ -159,14 +180,16 @@ const CryptoDetails = () => {
           ))}
         </Col>
       </Col>
+
+      {/* ======   Description in detail block   ========== */}
       <Col className="coin-desc-link">
         <Row className="coin-desc">
-          <Title level={3} className="coin-details-heading">
-            What is {cryptoDetails?.name}
-            {/* {HTMLReactParser(cryptoDetails?.description)} */}
+          <Title level={3} className="coin-details">
+            What is {cryptoDetails?.name}?
+            {HTMLReactParser(cryptoDetails?.description)}
           </Title>
           <Col className="coin-links">
-            <Title level={3} className="coin-details-heading">
+            <Title level={3} className="coin-details">
               {cryptoDetails?.name} Links
             </Title>
             {cryptoDetails?.links.map((link) => (
