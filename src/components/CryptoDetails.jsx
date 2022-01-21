@@ -19,26 +19,24 @@ import {
   useGetCryptoDetailsQuery,
   useGetCryptoHistoryQuery,
 } from "../services/cryptoApi";
-import LineChart from "./LineChart";
+//import LineChart from "./LineChart";
 
 const { Title, Text } = Typography;
-const { Option } = Select;
+//const { Option } = Select;
 
 const CryptoDetails = () => {
   const { coinId } = useParams();
-  const [timePeriod, setTimePeriod] = useState("24h");
+  //const [timePeriod, setTimePeriod] = useState("24h");
   const { data, isFetching } = useGetCryptoDetailsQuery(coinId);
-  const { data: coinHistory } = useGetCryptoHistoryQuery({
-    coinId,
-    timePeriod,
-  });
+  //const { data: coinHistory } = useGetCryptoHistoryQuery(coinId);
   const cryptoDetails = data?.data?.coin;
 
   console.log(data);
+  //console.log(coinHistory);
 
   if (isFetching) return "Loading...";
 
-  const time = ["3h", "24h", "7d", "30d", "3m", "6m", "1y", "3y", "5y"];
+  //const time = ["24h", "7d", "30d"];
 
   const stats = [
     {
@@ -120,7 +118,7 @@ const CryptoDetails = () => {
         </p>
       </Col>
 
-      <Select
+      {/* <Select
         defaultValue="24h"
         className="select-timeperiod"
         placeholder="Select Time Period"
@@ -129,7 +127,7 @@ const CryptoDetails = () => {
         {time.map((date) => (
           <Option key={date}>{date}</Option>
         ))}
-      </Select>
+      </Select> */}
 
       {/* ======   Line Chart block   ========== */}
       {/* <LineChart
