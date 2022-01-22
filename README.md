@@ -2,6 +2,8 @@
 
 This is a website build with React JS, It has a Navbar in the leftside to choose between Homepage, Cryptocurrencies and News about the crypto world.
 
+The Web site App was hosted on Netlify, the link to access is to look at it is [https://cryptowelt.netlify.app/](https://cryptowelt.netlify.app/).
+
 The data is been token from 2 APIs that are listed in Rapid API. One API with all the data of cryptos from Coin Ranking, and the news with another API from Bing news.
 
 The API [Coinranking](https://rapidapi.com/Coinranking/api/coinranking1/) was used to get Crypto prices and other statistics.
