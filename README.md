@@ -4,7 +4,9 @@ This is a website build with React JS, It has a Navbar in the leftside to choose
 
 The data is been taking from 2 APIs. One API with all the data of cryptos, and the news with another API from Bing news.
 
-Open [Coinranking](https://rapidapi.com/Coinranking/api/coinranking1/) to view it in your browser.
+The API [Coinranking](https://rapidapi.com/Coinranking/api/coinranking1/) was used to get Crypto prices and other statistics.
+
+The API [Bing News Search API](https://rapidapi.com/microsoft-azure-org-microsoft-cognitive-services/api/bing-news-search1/) was used yo get content about the cryptocurrencies.
 
 ## Dependencies installed
 
