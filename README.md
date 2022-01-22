@@ -2,7 +2,7 @@
 
 This is a website build with React JS, It has a Navbar in the leftside to choose between Homepage, Cryptocurrencies and News about the crypto world.
 
-The data is been taking from 2 APIs. One API with all the data of cryptos, and the news with another API from Bing news.
+The data is been token from 2 APIs that are listed in Rapid API. One API with all the data of cryptos from Coin Ranking, and the news with another API from Bing news.
 
 The API [Coinranking](https://rapidapi.com/Coinranking/api/coinranking1/) was used to get Crypto prices and other statistics.
 
