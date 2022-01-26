@@ -15,10 +15,7 @@ import {
   ThunderboltOutlined,
 } from "@ant-design/icons";
 
-import {
-  useGetCryptoDetailsQuery,
-  useGetCryptoHistoryQuery,
-} from "../services/cryptoApi";
+import { useGetCryptoDetailsQuery } from "../services/cryptoApi";
 //import LineChart from "./LineChart";
 
 const { Title, Text } = Typography;

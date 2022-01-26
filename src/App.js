@@ -40,8 +40,8 @@ const App = () => {
             Made with Love.
           </Typography.Title>
           <Space>
-            <Link to="/">Home</Link>
-            <Link to="/exchanges">Exchanges</Link>
+            <Link to="/">Home | </Link>
+            <Link to="/cryptos">Cryptocurrencies | </Link>
             <Link to="/news">News</Link>
           </Space>
         </div>
