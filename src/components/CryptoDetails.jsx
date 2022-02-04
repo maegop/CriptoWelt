@@ -28,7 +28,6 @@ const CryptoDetails = () => {
   //const { data: coinHistory } = useGetCryptoHistoryQuery(coinId);
   const cryptoDetails = data?.data?.coin;
 
-  
   //console.log(coinHistory);
 
   if (isFetching) return "Loading...";
@@ -145,7 +144,7 @@ const CryptoDetails = () => {
 
           {/* Value Statistics    ========== */}
           {stats.map(({ icon, title, value }) => (
-            <Col className="coin-stats">
+            <Col className="coin-stats" key={title}>
               <Col className="coin-stats-name">
                 <Text>{icon}</Text>
                 <Text>{title}</Text>
