@@ -1,3 +1,5 @@
+[![Netlify Status](https://api.netlify.com/api/v1/badges/0a38dd22-ac3c-4c87-adc7-021e01f5facc/deploy-status)](https://app.netlify.com/sites/cryptowelt/deploys)
+
 # Crypto Welt
 
 This is a website built with React JS in the Frontend side, and the styling was used the Ant design Framework. It has a Navbar in the left side to choose between Homepage, Cryptocurrencies and News about the crypto world.
@@ -11,6 +13,8 @@ The API [Coinranking](https://rapidapi.com/Coinranking/api/coinranking1/) was us
 The API [Bing News Search API](https://rapidapi.com/microsoft-azure-org-microsoft-cognitive-services/api/bing-news-search1/) was used to get up to date information about the cryptocurrencies.
 
 This Project has been separated into some pieces. This peaces called components are: Homepage, Cryptocurrencies, News and the Navbar. These were built with funtional-based components.
+
+![Crypto Welt Web App](/public/screenshot-website.jpg)
 
 ## Dependencies installed
 
