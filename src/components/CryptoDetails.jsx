@@ -28,7 +28,7 @@ const CryptoDetails = () => {
   //const { data: coinHistory } = useGetCryptoHistoryQuery(coinId);
   const cryptoDetails = data?.data?.coin;
 
-  console.log(data);
+  
   //console.log(coinHistory);
 
   if (isFetching) return "Loading...";
