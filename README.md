@@ -16,6 +16,23 @@ This Project has been separated into some pieces. This peaces called components 
 
 ![Crypto Welt Web App](/public/screenshot-website.jpg)
 
+## Tech stack:
+
+### Frontend:
+
+- HTML
+- Ant Design Framework
+- Javascript ES6+
+- React 17
+
+## Hosting:
+
+- Netlify
+
+## Project management:
+
+- Git and Github for version control
+
 ## Dependencies installed
 
 I used some libraries to build the project,libraries for UI, the library to perform the API request with Redux Tool kit, and a CSS framework Ant Design.
@@ -24,20 +41,53 @@ To formatting the numbers from statistics and cypto prices I used Minilify.
 
 The packages installed in the react project were the following:
 
+```sh
 npm install antd @ant-design/icons @reduxjs/toolkit react-router-dom react-redux axios html-react-parser millify moment react-chartjs-2
+```
 
-### `npm start`
+---
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Contributors:
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+Team who participated in this project:
 
-### `npm run build`
+- [Mario Gordon](https://github.com/maegop)
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+---
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## Where can you find the project?
+
+### [Working website](https://cryptowelt.netlify.app)
+
+---
+
+## Getting started with the project 🚀
+
+The following instructions will get you a copy of the project up and running on your local machine for development purposes.
+You'll need to do a couple of things in order to run this project on your local machine:
+
+1. Clone the repository:
+
+```sh
+git clone https://github.com/maegop/CriptoWelt.git
+```
+
+2. Install dependencies:
+
+```sh
+npm install # or yarn install
+```
+
+3. Run the frontend server:
+
+```sh
+npm start # or yarn start
+```
+
+4. Open the frontend in your browser:
+
+```sh
+http://localhost:3000
+```
+
+---
